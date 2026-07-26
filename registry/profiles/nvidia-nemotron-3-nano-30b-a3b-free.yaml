@@ -1,0 +1,25 @@
+model_id: nvidia/nemotron-3-nano-30b-a3b:free
+calibrated_at: '2026-07-26T05:25:32.425182'
+metadata:
+  id: nvidia/nemotron-3-nano-30b-a3b:free
+  context: 256000
+  provider: nvidia
+  family: nemotron
+tests:
+  simple_whole:
+    success: true
+    response_len: 172
+  simple_diff:
+    success: true
+    response_len: 143
+  medium_whole:
+    success: false
+    error: '''choices'''
+  medium_diff:
+    success: false
+    error: '''choices'''
+scores:
+  whole: 0.5
+  diff: 0.5
+tier: 1
+recommended_format: whole

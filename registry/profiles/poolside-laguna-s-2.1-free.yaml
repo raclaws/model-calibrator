@@ -1,0 +1,25 @@
+model_id: poolside/laguna-s-2.1:free
+calibrated_at: '2026-07-26T05:25:36.692191'
+metadata:
+  id: poolside/laguna-s-2.1:free
+  context: 262144
+  provider: poolside
+  family: laguna
+tests:
+  simple_whole:
+    success: true
+    response_len: 242
+  simple_diff:
+    success: true
+    response_len: 305
+  medium_whole:
+    success: true
+    response_len: 1500
+  medium_diff:
+    success: true
+    response_len: 1189
+scores:
+  whole: 1.0
+  diff: 1.0
+tier: 3
+recommended_format: diff

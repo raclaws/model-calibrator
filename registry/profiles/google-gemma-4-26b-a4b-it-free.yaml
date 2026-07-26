@@ -1,0 +1,25 @@
+model_id: google/gemma-4-26b-a4b-it:free
+calibrated_at: '2026-07-26T05:24:56.038517'
+metadata:
+  id: google/gemma-4-26b-a4b-it:free
+  context: 262144
+  provider: google
+  family: gemma
+tests:
+  simple_whole:
+    success: true
+    response_len: 172
+  simple_diff:
+    success: true
+    response_len: 143
+  medium_whole:
+    success: true
+    response_len: 1274
+  medium_diff:
+    success: true
+    response_len: 555
+scores:
+  whole: 1.0
+  diff: 1.0
+tier: 3
+recommended_format: diff

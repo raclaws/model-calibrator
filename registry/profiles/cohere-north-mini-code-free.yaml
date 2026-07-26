@@ -1,0 +1,25 @@
+model_id: cohere/north-mini-code:free
+calibrated_at: '2026-07-26T05:22:14.311551'
+metadata:
+  id: cohere/north-mini-code:free
+  context: 256000
+  provider: cohere
+  family: north
+tests:
+  simple_whole:
+    success: true
+    response_len: 172
+  simple_diff:
+    success: true
+    response_len: 143
+  medium_whole:
+    success: false
+    error: argument of type 'NoneType' is not iterable
+  medium_diff:
+    success: false
+    error: argument of type 'NoneType' is not iterable
+scores:
+  whole: 0.5
+  diff: 0.5
+tier: 1
+recommended_format: whole

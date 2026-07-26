@@ -1,0 +1,25 @@
+model_id: nvidia/nemotron-3-super-120b-a12b:free
+calibrated_at: '2026-07-26T05:25:17.497796'
+metadata:
+  id: nvidia/nemotron-3-super-120b-a12b:free
+  context: 262144
+  provider: nvidia
+  family: nemotron
+tests:
+  simple_whole:
+    success: true
+    response_len: 172
+  simple_diff:
+    success: true
+    response_len: 143
+  medium_whole:
+    success: true
+    response_len: 1516
+  medium_diff:
+    success: true
+    response_len: 706
+scores:
+  whole: 1.0
+  diff: 1.0
+tier: 3
+recommended_format: diff

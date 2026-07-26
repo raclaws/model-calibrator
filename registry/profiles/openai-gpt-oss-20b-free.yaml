@@ -1,0 +1,25 @@
+model_id: openai/gpt-oss-20b:free
+calibrated_at: '2026-07-26T05:26:06.995776'
+metadata:
+  id: openai/gpt-oss-20b:free
+  context: 131072
+  provider: openai
+  family: gpt-oss
+tests:
+  simple_whole:
+    success: true
+    response_len: 172
+  simple_diff:
+    success: true
+    response_len: 109
+  medium_whole:
+    success: true
+    response_len: 1808
+  medium_diff:
+    success: true
+    response_len: 705
+scores:
+  whole: 1.0
+  diff: 1.0
+tier: 3
+recommended_format: diff
