@@ -1,0 +1,26 @@
+model_id: kr/claude-haiku-4.5
+calibrated_at: '2026-07-26T05:09:31.441822'
+metadata:
+  id: kr/claude-haiku-4.5
+  params_b: 20
+  provider: anthropic
+  family: claude
+  context: 200000
+tests:
+  simple_whole:
+    success: true
+    response_len: 172
+  simple_diff:
+    success: true
+    response_len: 143
+  medium_whole:
+    success: true
+    response_len: 1842
+  medium_diff:
+    success: true
+    response_len: 558
+scores:
+  whole: 1.0
+  diff: 1.0
+tier: 3
+recommended_format: diff

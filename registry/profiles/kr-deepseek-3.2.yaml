@@ -1,0 +1,26 @@
+model_id: kr/deepseek-3.2
+calibrated_at: '2026-07-26T05:09:10.084503'
+metadata:
+  id: kr/deepseek-3.2
+  params_b: 685
+  provider: deepseek
+  family: deepseek
+  context: 128000
+tests:
+  simple_whole:
+    success: true
+    response_len: 266
+  simple_diff:
+    success: true
+    response_len: 217
+  medium_whole:
+    success: true
+    response_len: 1950
+  medium_diff:
+    success: true
+    response_len: 848
+scores:
+  whole: 1.0
+  diff: 1.0
+tier: 3
+recommended_format: diff

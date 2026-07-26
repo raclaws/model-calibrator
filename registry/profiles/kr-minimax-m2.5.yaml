@@ -1,0 +1,26 @@
+model_id: kr/minimax-m2.5
+calibrated_at: '2026-07-26T05:09:41.773098'
+metadata:
+  id: kr/minimax-m2.5
+  params_b: 456
+  provider: minimax
+  family: minimax
+  context: 1000000
+tests:
+  simple_whole:
+    success: true
+    response_len: 174
+  simple_diff:
+    success: true
+    response_len: 111
+  medium_whole:
+    success: true
+    response_len: 1325
+  medium_diff:
+    success: true
+    response_len: 281
+scores:
+  whole: 1.0
+  diff: 1.0
+tier: 3
+recommended_format: diff
