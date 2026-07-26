@@ -1,0 +1,18 @@
+model_id: meta/llama-3.2-3b-instruct
+source: nvidia-nim
+calibrated_at: '2026-07-26T05:54:25.714017'
+metadata:
+  id: meta/llama-3.2-3b-instruct
+  provider: meta
+  family: llama
+tests:
+  whole:
+    success: true
+    time: 8.8
+    len: 756
+  diff:
+    success: true
+    time: 1.0
+    len: 109
+tier: 3
+recommended_format: diff

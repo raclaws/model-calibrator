@@ -1,0 +1,17 @@
+model_id: meta/llama-3.3-70b-instruct
+source: nvidia-nim
+calibrated_at: '2026-07-26T05:54:35.570696'
+metadata:
+  id: meta/llama-3.3-70b-instruct
+  provider: meta
+  family: llama
+tests:
+  whole:
+    success: true
+    time: 168.9
+    len: 172
+  diff:
+    success: false
+    error: Request timed out.
+tier: 2
+recommended_format: whole

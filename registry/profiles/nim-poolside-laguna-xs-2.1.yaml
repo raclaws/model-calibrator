@@ -1,0 +1,18 @@
+model_id: poolside/laguna-xs-2.1
+source: nvidia-nim
+calibrated_at: '2026-07-26T05:54:23.381261'
+metadata:
+  id: poolside/laguna-xs-2.1
+  provider: poolside
+  family: laguna
+tests:
+  whole:
+    success: true
+    time: 1.5
+    len: 243
+  diff:
+    success: true
+    time: 0.8
+    len: 228
+tier: 3
+recommended_format: diff
