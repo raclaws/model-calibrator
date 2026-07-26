@@ -2,6 +2,8 @@
 
 Runtime capability calibration for LLMs in agentic coding harnesses.
 
+> **Status:** Pre-release. No harness integration exists yet — the value proposition ("harnesses embed this to auto-configure") is aspirational until at least one real adapter ships. The registry and probes work; consumption is unproven.
+
 ## Problem
 
 Aider works because Paul maintains model-specific tuning — different edit formats, prompts, and temperatures per model family. This knowledge is embedded in code, not a portable spec. Other harnesses (OpenCode, Goose, Claude Code) either hardcode frontier model assumptions or fail silently on untested models.
@@ -32,6 +34,8 @@ print(f"Tier: T{manifest.overall_tier}")            # 1, 2, or 3
 
 ## Pre-Calibrated Registry (13 models)
 
+> **Calibrated:** 2026-07-26. Model behavior drifts with provider updates — stale calibrations are worse than none (confidently wrong). Re-run periodically or check `calibrated_at` in each profile.
+
 | Model | Source | Whole | Diff | Tier | Recommended |
 |-------|--------|-------|------|------|-------------|
 | kr/deepseek-3.2 | Gateway | 100% | 100% | T3 | diff |
@@ -47,6 +51,8 @@ print(f"Tier: T{manifest.overall_tier}")            # 1, 2, or 3
 | nim/poolside-laguna-xs-2.1 | NVIDIA NIM | 100% | 100% | T3 | diff |
 | nim/meta-llama-3.2-3b-instruct | NVIDIA NIM | 100% | 100% | T3 | diff |
 | nim/meta-llama-3.3-70b-instruct | NVIDIA NIM | 100% | timeout | T2 | whole |
+
+**Note on round numbers:** Gateway profiles show 100%/0% because they run 4 tests (2 simple + 2 medium) with binary pass/fail — not the full 20-sample probe suite the RFC specifies. This is a quick validation, not a statistically rigorous calibration. The OpenRouter/NIM scripts also use 4 tests. True Wilson CI-backed probes with n=20 samples per format are in `probes/edit_format.py` but weren't used for initial registry population (cost/time tradeoff).
 
 ## Key Findings
 
