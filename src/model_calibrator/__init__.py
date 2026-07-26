@@ -23,6 +23,7 @@ from model_calibrator.schema import (
 from model_calibrator.heuristics import HeuristicInference
 from model_calibrator.registry import Registry
 from model_calibrator.client import CalibrationClient
+from model_calibrator.calibrator import Calibrator
 
 __version__ = "0.2.0"
 __all__ = [
